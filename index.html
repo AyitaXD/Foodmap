@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Foodmap</title>
+  <link rel="shortcut icon" type=“image/x-icon” href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <section class="splashScreen">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Foodmap</h1>
+          <div class="loader col-xs-offset-4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pagPrincipal hide">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Foodmap</h1>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513025937686" width="400" height="200" frameborder="0" style="border:0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2>Comida cerca de ti</h2>
+          <!-- <input type="text" placeholder="Filtrar restaurantes" style="width: 100%"> -->
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Filtrar restaurantes
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a class="p" href="#">Comida chatarra</a></li>
+              <li><a class="l" href="#">Almuerzos</a></li>
+              <li><a class="o" href="#">Comida internacional</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="images col-xs-12"></div>
+        <div class="principal text-center">
+          <img src="assets/img/pizza.png">
+        </div>
+        <br>
+        <!-- mouseover -->
+        <div class="mouseover1">
+          <p style="position: relative; bottom: 140px; left: 31px;">El Panzón Bustamante</p>
+        </div>
+        <div class="mouseover2">
+          <p style="position: relative; bottom: 140px; left: 415px;">Johnny Rockets</p>
+        </div>
+        <div class="mouseover3">
+          <p style="position: relative; bottom: 140px; left: 775px;">Burger King</p>
+        </div>
+        <div class="mouseover4">
+          <p style="position: relative; bottom: 65px; left: 31px;">Schopdog</p>
+        </div>
+        <div class="mouseover5">
+          <p style="position: relative; bottom: 65px; left: 415px;">Mesón de Postres</p>
+        </div>
+        <div class="mouseover6">
+          <p style="position: relative; bottom: 65px; left: 775px;">Lusitano</p>
+        </div>
+
+        <div class="mouseover7">
+          <p style="position: relative; bottom: 140px; left: 31px;">La Greda Santiago</p>
+        </div>
+        <div class="mouseover8">
+          <p style="position: relative; bottom: 140px; left: 515px;">Estrella Marina</p>
+        </div>
+        <div class="mouseover9">
+          <p style="position: relative; bottom: 140px; left: 775px;">Corral Quemado</p>
+        </div>
+        <div class="mouseover10">
+          <p style="position: relative; bottom: 65px; left: 31px;">Pollos Tarragona</p>
+        </div>
+        <div class="mouseover11">
+          <p style="position: relative; bottom: 65px; left: 415px;">Manatí</p>
+        </div>
+        <div class="mouseover12">
+          <p style="position: relative; bottom: 65px; left: 775px;">Comida Chilena</p>
+        </div>
+
+        <div class="mouseover13">
+          <p style="position: relative; bottom: 140px; left: 31px;">Las Delicias Del Perú</p>
+        </div>
+        <div class="mouseover14">
+          <p style="position: relative; bottom: 140px; left: 415px;">Montaña China</p>
+        </div>
+        <div class="mouseover15">
+          <p style="position: relative; bottom: 140px; left: 775px;">Seoul Restaurant</p>
+        </div>
+        <div class="mouseover16">
+          <p style="position: relative; bottom: 65px; left: 31px;">La Bella Italia</p>
+        </div>
+        <div class="mouseover17">
+          <p style="position: relative; bottom: 65px; left: 415px;">Sushi Sesamo</p>
+        </div>
+        <div class="mouseover18">
+          <p style="position: relative; bottom: 65px; left: 775px;">Los Cuates</p>
+        </div>
+      </div>
+    </div>
+    <!-- modals -->
+    <div class="container">
+      <!-- modal 1 -->
+      <div id="modal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">El Panzón Bustamante</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 2 -->
+      <div id="modal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Johnny Rockets</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 3 -->
+      <div id="modal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Burger King</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 4 -->
+      <div id="modal4" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Schopdog</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 5 -->
+      <div id="modal5" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Mesón de Postres</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 6 -->
+      <div id="modal6" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Lusitano</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 7 -->
+      <div id="modal7" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">La Greda Santiago</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 8 -->
+      <div id="modal8" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Estrella Marina</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 9 -->
+      <div id="modal9" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Corral Quemado</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 10 -->
+      <div id="modal10" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Pollos Tarragona</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 11 -->
+      <div id="modal11" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Manatí</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 12 -->
+      <div id="modal12" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Comida Chilena</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 13 -->
+      <div id="modal13" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Las Delicias Del Perú</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 14 -->
+      <div id="modal14" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Montaña China</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 15 -->
+      <div id="modal15" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Seoul Restaurant</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 16 -->
+      <div id="modal16" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">La Bella Italia</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 17 -->
+      <div id="modal17" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sushi Sesamo</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal 18 -->
+      <div id="modal18" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Los Cuates</h4>
+            </div>
+            <div class="modal-body">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13329.588291788228!2d-70.75847674999999!3d-33.36069815!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513220059392" width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p><strong>Dirección:</strong> Imaginaria #341, Santiago </p>
+                </div>
+                <div class="col-xs-6">
+                  <p><strong>Precio:</strong> $20.000</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Pedir ahora</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
